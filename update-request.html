@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Start New Offsite Firearm Event Request</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="container">
+
+    <!-- PAGE CONTEXT HEADER -->
+    <header class="page-header">
+      <h2>Start New Offsite Firearm Event Request</h2>
+      <p class="sub">
+        Complete this section at least 30 days prior to the scheduled event.
+        Submission does not authorize firearm movement.
+      </p>
+    </header>
+
+    <!-- NEW REQUEST FORM -->
+    <form id="newRequestForm" class="card">
+
+      <section class="section">
+        <h3>Request & Event Information</h3>
+
+        <div class="grid-2">
+          <label>
+            Date of Request
+            <input type="date" name="requestDate" required />
+          </label>
+
+          <label>
+            Date of Event
+            <input type="date" name="eventDate" required />
+          </label>
+        </div>
+
+        <label>
+          Event Name
+          <input type="text" name="eventName" required />
+        </label>
+
+        <label>
+          Event Address
+          <textarea name="eventAddress" rows="2" required></textarea>
+        </label>
+
+        <label>
+          Event Sponsor / Organization
+          <input type="text" name="sponsorOrg" required />
+        </label>
+
+        <div class="grid-2">
+          <label>
+            Sponsor Contact Name
+            <input type="text" name="sponsorContactName" required />
+          </label>
+
+          <label>
+            Sponsor Phone / Email
+            <input type="text" name="sponsorContactInfo" required />
+          </label>
+        </div>
+
+        <label>
+          Expected Attendance (if known)
+          <input type="number" name="expectedAttendance" min="0" />
+        </label>
+
+        <label>
+          Brief Description of Event
+          <textarea name="eventDescription" rows="3"></textarea>
+        </label>
+
+        <label>
+          District Manager Email (routing)
+          <input
+            type="email"
+            name="dmEmail"
+            placeholder="dm@turners.com"
+            required
+          />
+        </label>
+      </section>
+
+      <hr class="sep" />
+
+      <section class="section">
+        <p class="note">
+          Week‑of‑event details (employees, firearms, transfer information)
+          will be completed separately after initial review.
+        </p>
+      </section>
+
+      <div class="actions">
+        <button type="submit">Submit New Request</button>
+        <span class="status" id="formStatus" aria-live="polite"></span>
+      </div>
+
+    </form>
+
+  </main>
+
+  <!-- SHARED SCRIPT -->
+  <script src="app.js"></script>
+</body>
+</html>
+``
