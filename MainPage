@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Offsite Firearm Event Request</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Offsite Firearm Event Request</h1>
+      <p class="sub">
+        Use this portal to submit requests for offsite firearm events. Submission does not authorize firearm movement.
+      </p>
+    </header>
+
+    <form id="requestForm" class="card">
+      <section class="section">
+        <h2>Request & Event Information (30+ Days Out)</h2>
+
+        <div class="grid-2">
+          <label>
+            Date of Request
+            <input type="date" name="requestDate" required />
+          </label>
+          <label>
+            Date of Event
+            <input type="date" name="eventDate" required />
+          </label>
+        </div>
+
+        <label>
+          Event Name
+          <input type="text" name="eventName" required />
+        </label>
+
+        <label>
+          Event Address
+          <textarea name="eventAddress" rows="2" required></textarea>
+        </label>
+
+        <div class="grid-2">
+          <label>
+            Event Sponsor / Organization
+            <input type="text" name="sponsorOrg" required />
+          </label>
+          <label>
+            Sponsor Contact Name
+            <input type="text" name="sponsorContactName" required />
+          </label>
+        </div>
+
+        <label>
+          Sponsor Phone/Email
+          <input type="text" name="sponsorContactInfo" required />
+        </label>
+
+        <div class="grid-2">
+          <label>
+            Expected Attendance (optional)
+            <input type="number" name="expectedAttendance" min="0" />
+          </label>
+          <label>
+            District Manager Email (routing)
+            <input type="email" name="dmEmail" placeholder="dm@turners.com" required />
+          </label>
+        </div>
+
+        <label>
+          Brief Description of Event (optional)
+          <textarea name="eventDescription" rows="3"></textarea>
+        </label>
+      </section>
+
+      <hr class="sep" />
+
+      <section class="section">
+        <h2>Turner’s Employees & Firearms (Week of Event)</h2>
+
+        <label>
+          Turner’s Employees Attending
+          <textarea name="employeesAttending" rows="2"></textarea>
+        </label>
+
+        <div class="grid-2">
+          <label>
+            Number of Guns
+            <input type="number" name="gunCount" min="0" />
+          </label>
+          <label>
+            Ownership Status
+            <select name="ownershipStatus">
+              <option value="">Select…</option>
+              <option>Paid For</option>
+              <option>Turner’s Owned</option>
+              <option>Mixed</option>
+            </select>
+          </label>
+        </div>
+
+        <label>
+          Brief Description of Firearms
+          <textarea name="firearmDescription" rows="3"></textarea>
+        </label>
+
+        <label>
+          How are the guns getting to the event?
+          <select name="transportMethod">
+            <option value="">Select…</option>
+            <option>Store Vehicle</option>
+            <option>Employee Vehicle</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </section>
+
+      <hr class="sep" />
+
+      <section class="section">
+        <h2>Transfer Information</h2>
+        <div class="grid-2">
+          <label>
+            Receiving Store #
+            <input type="text" name="receivingStoreNumber" />
+          </label>
+          <label>
+            Transfer #
+            <input type="text" name="transferNumber" />
+          </label>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button type="submit">Submit Request</button>
+        <span id="status" class="status" aria-live="polite"></span>
+      </div>
+    </form>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
+``
